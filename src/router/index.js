@@ -8,11 +8,15 @@ import {
   CometChatConversationListWithMessages,
 } from "../cometchat-pro-vue-ui-kit/CometChatWorkspace/src";
 import { AppHome, AppNavigation } from "../components/";
+import Support from "@/components/SupportPage/Support";
+import SupportBox from "@/components/SupportPage/SupportBox";
 
 const routes = [
   { path: "/", component: AppHome },
   { path: "/menu", component: AppNavigation },
   { path: "/embedded-app", component: CometChatUI },
+  { path: "/support", component: Support },
+  { path: "/support-box", component: SupportBox },
 
   {
     path: "/conversations",
