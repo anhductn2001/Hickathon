@@ -1,5 +1,5 @@
 <template>
-  <VueSidebarMenuAkahon :menu-items="menuItems" />
+  <VueSidebarMenuAkahon :menu-items="menuItems" menu-title="FPT CLOUD" menulogo='' menuIcon='bx bx-cloud'/>
 </template>
 
 <script>
@@ -10,10 +10,11 @@ export default {
   components: {VueSidebarMenuAkahon},
   data() {
     return {
+      menuTitle: 'FPT CLOUD',
       menuItems: [
-        {link: '#/support',name: 'Kubernetes', tooltip: 'Kubernetes' },
-        {link: '#/support',name: 'Databases', tooltip: 'Databases' },
-        {link: '#/support',name: 'Api management', tooltip: 'Api management' },
+        {link: '#/support',name: 'Kubernetes', tooltip: 'Kubernetes', icon: "bx bxl-kubernetes"},
+        {link: '#/support',name: 'Databases', tooltip: 'Databases' , icon: "bx bx-data"},
+        {link: '#/support',name: 'Api management', tooltip: 'Api management' , icon: "bx-grid-alt"},
       ]
     }
   }

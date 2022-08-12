@@ -12,7 +12,7 @@
             :key="i"
             :style="styles.box"
             class="kitchen-sink__box"
-            v-for="({ title, image, href }, i) in components[type]"
+            v-for="({ title, image,href}, i) in components[type]"
         >
           <div :style="styles.titleWrapper">
             <div :style="styles.thumbnailWrapper">
@@ -22,14 +22,10 @@
               />
             </div>
             <h2 :style="styles.componentTitle">{{ title }}</h2>
+            <button class="kitchen-sink__link" :style="styles.logoutBtn.button" :href="href">
+                Report
+            </button>
           </div>
-          <ul :style="styles.linkWrapper" class="kitchen-sink__link__wrapper">
-            <li>
-              <a class="kitchen-sink__link" :style="styles.link" :href="href">
-                Launch
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -62,19 +58,7 @@ export default {
       },
     };
   },
-  created() {
-    CometChat.getLoggedinUser().then(
-        (user) => {
-          if (!user) {
-            location.href = "/";
-          }
-        },
-        (error) => {
-          console.log(error);
-          location.href = "/";
-        }
-    );
-  },
+
   computed: {
     styles() {
       return {

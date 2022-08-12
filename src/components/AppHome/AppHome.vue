@@ -2,7 +2,7 @@
   <div>
     <div :style="styles.wrapper">
       <div style="margin: auto">
-        <p :style="styles.title">Kitchen Sink App</p>
+        <p :style="styles.title">FPT CLOUD</p>
         <p :style="styles.subtitle">Login with one of our sample users</p>
         <div :style="styles.userWrapper">
           <div
@@ -56,27 +56,27 @@ export default {
     return {
       users: [
         {
-          name: "superhero1",
+          name: "customer1",
           image:
             "https://data-us.cometchat.io/assets/images/avatars/ironman.png",
         },
         {
-          name: "superhero2",
+          name: "customer2",
           image:
             "https://data-us.cometchat.io/assets/images/avatars/captainamerica.png",
         },
         {
-          name: "superhero3",
+          name: "support1",
           image:
             "https://data-us.cometchat.io/assets/images/avatars/spiderman.png",
         },
         {
-          name: "superhero4",
+          name: "support2",
           image:
             "https://data-us.cometchat.io/assets/images/avatars/wolverine.png",
         },
         {
-          name: "superhero5",
+          name: "fci",
           image:
             "https://data-us.cometchat.io/assets/images/avatars/cyclops.png",
         },
@@ -126,23 +126,6 @@ export default {
           this.showloader = false;
         });
     },
-  },
-  created() {
-    this.showloader = true;
-    CometChat.getLoggedinUser().then(
-      (user) => {
-        if (user) {
-          location.href = "#/menu";
-          this.uid = user.getUid();
-        } else {
-          this.showloader = false;
-        }
-      },
-      (error) => {
-        console.log("Error in [getLoggedinUser]", error);
-        this.showloader = false;
-      }
-    );
-  },
+  }
 };
 </script>

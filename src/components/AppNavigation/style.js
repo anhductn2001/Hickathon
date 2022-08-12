@@ -138,3 +138,18 @@ export const logoutBtn = () => {
     },
   };
 };
+export const reportBtn = () => {
+  return {
+    margin: "auto",
+    padding: "32px",
+    textAlign: "center",
+    button: {
+      outline: "none",
+      backgroundColor: "#333",
+      borderRadius: "10px",
+      color: "white",
+      padding: "10px 25px",
+      cursor: "pointer",
+    },
+  };
+};
